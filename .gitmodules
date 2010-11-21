@@ -16,3 +16,21 @@
 [submodule "bundles/vim-unimpaired"]
 	path = bundles/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundles/delimitMate"]
+	path = bundles/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundles/nerdcommenter"]
+	path = bundles/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "bundles/nerdtree"]
+	path = bundles/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundles/matchit"]
+	path = bundles/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
+[submodule "bundles/supertab"]
+	path = bundles/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundles/snipmate"]
+	path = bundles/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
