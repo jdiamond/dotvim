@@ -119,9 +119,8 @@ set textwidth=79 " Wrap lines at column 79.
 set nojoinspaces " Don't add two spaces at the end of sentences.
 set colorcolumn=81 " Show a line at column 81.
 
-noremap <silent><Leader>f :FufFile<CR>
-noremap <silent><Leader>D :FufDir<CR>
-noremap <silent><Leader>b :FufBuffer<CR>
+" Shortcut for opening NERDTree.
+noremap <silent><Leader>t :NERDTree<CR>
 
 " Try to detect the indetation settings.
 autocmd BufReadPost * :DetectIndent
