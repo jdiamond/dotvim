@@ -1,0 +1,18 @@
+[submodule "bundles/argtextobj.vim"]
+	path = bundles/argtextobj.vim
+	url = https://github.com/vim-scripts/argtextobj.vim.git
+[submodule "bundles/camelcasemotion"]
+	path = bundles/camelcasemotion
+	url = https://github.com/vim-scripts/camelcasemotion.git
+[submodule "bundles/DetectIndent"]
+	path = bundles/DetectIndent
+	url = https://github.com/vim-scripts/DetectIndent.git
+[submodule "bundles/vim-blackboard"]
+	path = bundles/vim-blackboard
+	url = https://github.com/nelstrom/vim-blackboard.git
+[submodule "bundles/vim-surround"]
+	path = bundles/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundles/vim-unimpaired"]
+	path = bundles/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
