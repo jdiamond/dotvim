@@ -4,18 +4,22 @@
 [submodule "bundles/camelcasemotion"]
 	path = bundles/camelcasemotion
 	url = https://github.com/vim-scripts/camelcasemotion.git
+	ignore = untracked
 [submodule "bundles/DetectIndent"]
 	path = bundles/DetectIndent
 	url = https://github.com/vim-scripts/DetectIndent.git
+	ignore = untracked
 [submodule "bundles/vim-blackboard"]
 	path = bundles/vim-blackboard
 	url = https://github.com/nelstrom/vim-blackboard.git
 [submodule "bundles/vim-surround"]
 	path = bundles/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+	ignore = untracked
 [submodule "bundles/vim-unimpaired"]
 	path = bundles/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+	ignore = untracked
 [submodule "bundles/delimitMate"]
 	path = bundles/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
@@ -28,9 +32,11 @@
 [submodule "bundles/matchit"]
 	path = bundles/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
 [submodule "bundles/supertab"]
 	path = bundles/supertab
 	url = https://github.com/ervandew/supertab.git
 [submodule "bundles/snipmate"]
 	path = bundles/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+	ignore = untracked
