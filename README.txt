@@ -10,8 +10,7 @@ Create symlinks:
 Switch to the `~/.vim` directory, and fetch submodules:
 
     cd ~/.vim
-    git submodule init
-    git submodule update
+    git submodule update --init
 
 On Windows (as Administrator):
 
@@ -20,6 +19,5 @@ On Windows (as Administrator):
     mklink .vim\vimrc .vimrc
     mklink .vim\gvimrc .gvimrc
     cd .vim
-    git submodule init
-    git submodule update
+    git submodule update --init
 
