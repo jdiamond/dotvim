@@ -40,3 +40,6 @@
 	path = bundles/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
 	ignore = untracked
+[submodule "bundles/vim-makegreen"]
+	path = bundles/vim-makegreen
+	url = https://github.com/reinh/vim-makegreen.git

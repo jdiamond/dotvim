@@ -120,7 +120,7 @@ set nojoinspaces " Don't add two spaces at the end of sentences.
 set colorcolumn=81 " Show a line at column 81.
 
 " Shortcut for opening NERDTree.
-noremap <silent><Leader>t :NERDTree<CR>
+noremap <silent><Leader>f :NERDTree<CR>
 
 " Try to detect the indetation settings.
 autocmd BufReadPost * :DetectIndent
