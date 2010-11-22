@@ -21,3 +21,12 @@ On Windows (as Administrator):
     cd .vim
     git submodule update --init
 
+I think that mklink only runs on Vista and up. If you're on XP, you can create
+a .vimrc with this one line in it in %HOME%.
+
+    source ~/.vim/vimrc
+
+Your .gvimrc could look like this:
+
+    source ~/.vim/gvimrc
+
