@@ -40,3 +40,6 @@
 [submodule "bundles/vim-makegreen"]
 	path = bundles/vim-makegreen
 	url = https://github.com/reinh/vim-makegreen.git
+[submodule "bundles/tcomment_vim"]
+	path = bundles/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
