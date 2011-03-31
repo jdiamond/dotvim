@@ -16,8 +16,8 @@ On Windows (as Administrator):
 
     cd %HOME%
     git clone git://github.com/jdiamond/dotvim.git .vim
-    mklink .vim\vimrc .vimrc
-    mklink .vim\gvimrc .gvimrc
+    mklink .vimrc .vim\vimrc
+    mklink .gvimrc .vim\gvimrc
     cd .vim
     git submodule update --init
 
