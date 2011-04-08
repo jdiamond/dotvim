@@ -2,5 +2,5 @@
 set guifont=Consolas:h12:cANSI
 
 " Set the colorscheme.
-colorscheme blackboard
+colorscheme solarized
 
