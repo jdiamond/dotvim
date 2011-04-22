@@ -200,3 +200,10 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 "}}}
+
+" Tell the openbrowser plugin to *not* open files in Vim.
+let g:openbrowser_open_filepath_in_vim = 0
+
+" Open the current file in the default browser.
+nnoremap <leader>o :OpenBrowser %<CR>
+
