@@ -42,7 +42,7 @@ set foldlevelstart=99
 set list
 
 " Glyphs for whitespace characters when list is toggled on.
-set listchars=tab:>-,trail:-
+set listchars=tab:>\ ,trail:-
 
 " Shortcut to rapidly toggle `set list`.
 nmap <leader>l :set list!<CR>:set list?<CR>
