@@ -1,3 +1,5 @@
+" vim:fdm=marker
+
 " This is Vim, not vi.
 set nocompatible
 
@@ -125,12 +127,16 @@ noremap <silent><Leader>f :NERDTreeToggle<CR>
 " Try to detect the indetation settings.
 autocmd BufReadPost * :DetectIndent
 
+" Python stuff {{{
+
 " For all Python files, set the tab settings.
 autocmd FileType python setlocal ts=8 sts=4 sw=4 et
 
 " Set things up so that Python files can be run from within Vim.
 autocmd FileType python compiler pyunit
 autocmd FileType python setlocal makeprg=python
+
+" }}}
 
 " Set tabstop, softtabstop and shiftwidth to the same value {{{
 " From http://vimcasts.org/episodes/tabs-and-spaces/
@@ -163,11 +169,17 @@ function! SummarizeTabs()
 endfunction
 " }}}
 
+" Duplicate lines {{{
+
 " Duplicate line in normal mode.
 noremap <leader>d yyp
 
 " Duplicate selection in visual mode.
 vnoremap <leader>d y'>p
+
+" }}}
+
+" Quickfix {{{
 
 " Function for jumping to the next quickfix and cycling back to the beginning
 " when reaching the end.
@@ -188,7 +200,10 @@ function! NextQuickfix()
   endif
 endfunction
 
+" }}}
+
 " Bubbling text {{{
+
 " http://vimcasts.org/episodes/bubbling-text/
 " Uses vim-unimpaired: http://github.com/tpope/vim-unimpaired
 
@@ -199,11 +214,44 @@ nmap <C-Down> ]e
 " Bubble multiple lines.
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
-"}}}
+" }}}
+
+" View in browser {{{
 
 " Tell the openbrowser plugin to *not* open files in Vim.
 let g:openbrowser_open_filepath_in_vim = 0
 
-" Open the current file in the default browser.
-nnoremap <leader>o :OpenBrowser %<CR>
+nnoremap <leader>v :call ViewFileInBrowser()<CR>
+nnoremap <leader>V :call SetFileToViewInBrowser()<CR>
+
+function! ViewFileInBrowser()
+  if exists('g:filetoview')
+    call OpenFileInBrowser(g:filetoview)
+  else
+    call SetFileToViewInBrowser()
+  endif
+endfunction
+
+function! SetFileToViewInBrowser()
+  if &buftype == 'nofile' || &buftype == 'quickfix' || &buftype == 'help'
+    return
+  endif
+  let l:choice = confirm('Set "' . expand('%') . '" as the default file to view from now on?', "&Yes, set this file as the default and view it\n&No, just view this file")
+  if l:choice == 0
+    return
+  endif
+  if l:choice == 1
+    let g:filetoview = expand('%:p')
+  endif
+  call OpenFileInBrowser(expand('%p'))
+endfunction
+
+function! OpenFileInBrowser(file)
+  if &modified
+    write
+  endif
+  call openbrowser#open(a:file)
+endfunction
+
+" }}}
 
