@@ -49,3 +49,6 @@
 [submodule "bundles/open-browser.vim"]
 	path = bundles/open-browser.vim
 	url = https://github.com/tyru/open-browser.vim.git
+[submodule "bundles/vim-fugitive"]
+	path = bundles/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
