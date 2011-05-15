@@ -1,0 +1,19 @@
+snippet f
+	function(${1:args}) { ${2} }
+snippet fu
+	function(${1:args}) {
+		${2}
+	}
+snippet fun
+	function ${1:name}(${2:args}) {
+		${3}
+	}
+snippet for
+	for (var ${2:i} = 0; $2 < ${1:items}.length; $2 += 1) {
+		var ${3:item} = $1[$2];
+		${4}
+	}
+snippet if
+	if (${1}) {
+		${2}
+	}
