@@ -124,20 +124,6 @@ set colorcolumn=81 " Show a line at column 81.
 " Shortcut for opening NERDTree.
 noremap <silent><Leader>f :NERDTreeToggle<CR>
 
-" Try to detect the indetation settings.
-autocmd BufReadPost * :DetectIndent
-
-" Python stuff {{{
-
-" For all Python files, set the tab settings.
-autocmd FileType python setlocal ts=8 sts=4 sw=4 et
-
-" Set things up so that Python files can be run from within Vim.
-autocmd FileType python compiler pyunit
-autocmd FileType python setlocal makeprg=python
-
-" }}}
-
 " Set tabstop, softtabstop and shiftwidth to the same value {{{
 " From http://vimcasts.org/episodes/tabs-and-spaces/
 command! -nargs=* Stab call Stab()
@@ -257,3 +243,32 @@ endfunction
 
 let g:snippets_dir = '~/.vim/snippets'
 
+" FileType Auto Commands {{{
+
+augroup HtmlAutoCommands
+  autocmd!
+  autocmd FileType html setlocal ts=4 sts=4 sw=4 noet tw=0
+augroup END
+
+augroup JavaScriptAutoCommands
+  autocmd!
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet tw=0
+augroup END
+
+augroup PythonAutoCommands
+  autocmd!
+  autocmd FileType python setlocal ts=8 sts=4 sw=4 et tw=0
+
+  " Set things up so that Python files can be run from within Vim.
+  autocmd FileType python compiler pyunit
+  autocmd FileType python setlocal makeprg=python
+augroup END
+
+augroup AllAutoCommands
+  autocmd!
+
+  " Try to detect the indetation settings.
+  autocmd BufReadPost * :DetectIndent
+augroup END
+
+" }}}
