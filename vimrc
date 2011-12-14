@@ -20,7 +20,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
 
-" Enable filetype detection. Must be after bundlers get added.
+" Enable filetype detection. Must be after bundles get added.
 filetype plugin indent on
 
 " Hitting the , key is more convenient than \ key.
@@ -224,3 +224,10 @@ augroup END
 
 " }}}
 
+" CtrlP Options {{{
+
+let g:ctrlp_map = '<leader>f'
+nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader>r :CtrlPMRUFiles<CR>
+
+" }}}
