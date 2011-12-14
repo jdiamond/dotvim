@@ -181,14 +181,7 @@ function! NextQuickfix()
   silent! cnext
   if v:errmsg != ""
     " If there's an error message, we must be at the end of the list.
-    crewind
-    if ! getqflist()[0]['valid']
-      " If the first error isn't a real error, jump to the next one.
-      cnext
-    endif
-  else
-    " Redisplay the current error so that the message appears.
-    cc
+    silent! crewind
   endif
 endfunction
 
