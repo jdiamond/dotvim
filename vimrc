@@ -7,13 +7,20 @@ set nocompatible
 set runtimepath^=~/.vim
 set runtimepath+=~/.vim/after
 
-" Pathogen docs suggest turning filetype off at first.
+" Vundle docs require turning filetype off at first.
 filetype off
 
-" Append the bundle directories to the runtimepath.
-call pathogen#runtime_append_all_bundles('bundles')
+" Turn on Vundle.
+set rtp+=~/.vim/vundle/
+call vundle#rc()
 
-" Enable filetype detection. Must be after Pathogen call.
+" Bundles go here.
+Bundle 'DetectIndent'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kchmck/vim-coffee-script'
+
+" Enable filetype detection. Must be after bundlers get added.
 filetype plugin indent on
 
 " Hitting the , key is more convenient than \ key.
@@ -121,9 +128,6 @@ set textwidth=79 " Wrap lines at column 79.
 set nojoinspaces " Don't add two spaces at the end of sentences.
 set colorcolumn=81 " Show a line at column 81.
 
-" Shortcut for opening NERDTree.
-noremap <silent><Leader>f :NERDTreeToggle<CR>
-
 " Set tabstop, softtabstop and shiftwidth to the same value {{{
 " From http://vimcasts.org/episodes/tabs-and-spaces/
 command! -nargs=* Stab call Stab()
@@ -188,59 +192,6 @@ endfunction
 
 " }}}
 
-" Bubbling text {{{
-
-" http://vimcasts.org/episodes/bubbling-text/
-" Uses vim-unimpaired: http://github.com/tpope/vim-unimpaired
-
-" Bubble single lines.
-nmap <C-Up> [e
-nmap <C-Down> ]e
-
-" Bubble multiple lines.
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-" }}}
-
-" View in browser {{{
-
-" Tell the openbrowser plugin to *not* open files in Vim.
-let g:openbrowser_open_filepath_in_vim = 0
-
-nnoremap <leader>v :call ViewFileInBrowser()<CR>
-nnoremap <leader>V :call SetFileToViewInBrowser()<CR>
-
-function! ViewFileInBrowser()
-  if exists('g:filetoview')
-    call OpenFileInBrowser(g:filetoview)
-  else
-    call SetFileToViewInBrowser()
-  endif
-endfunction
-
-function! SetFileToViewInBrowser()
-  if &buftype == 'nofile' || &buftype == 'quickfix' || &buftype == 'help'
-    return
-  endif
-  let l:choice = confirm('Set "' . expand('%') . '" as the default file to view from now on?', "&Yes, set this file as the default and view it\n&No, just view this file")
-  if l:choice == 0
-    return
-  endif
-  if l:choice == 1
-    let g:filetoview = expand('%:p')
-  endif
-  call OpenFileInBrowser(expand('%p'))
-endfunction
-
-function! OpenFileInBrowser(file)
-  if &modified
-    write
-  endif
-  call openbrowser#open(a:file)
-endfunction
-
-" }}}
-
 let g:snippets_dir = '~/.vim/snippets'
 
 " FileType Auto Commands {{{
@@ -272,3 +223,4 @@ augroup AllAutoCommands
 augroup END
 
 " }}}
+
