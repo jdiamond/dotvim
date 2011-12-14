@@ -20,6 +20,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
+Bundle 'jdiamond/jslint.vim'
 
 " Enable filetype detection. Must be after bundles get added.
 filetype plugin indent on
