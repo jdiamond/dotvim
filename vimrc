@@ -18,12 +18,21 @@ call vundle#rc()
 Bundle 'DetectIndent'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
-Bundle 'jdiamond/jslint.vim'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-commentary'
+Bundle 'Parameter-Text-Objects'
+Bundle 'michaeljsmith/vim-indent-object'
+
+" Bundles required for snipMate.
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
 
 " Enable filetype detection. Must be after bundles get added.
 filetype plugin indent on
+
+let g:snippets_dir = '~/.vim/snippets'
 
 " Hitting the , key is more convenient than \ key.
 let mapleader = ","
@@ -187,8 +196,6 @@ endfunction
 
 " }}}
 
-let g:snippets_dir = '~/.vim/snippets'
-
 " FileType Auto Commands {{{
 
 augroup HtmlAutoCommands
@@ -224,5 +231,11 @@ augroup END
 let g:ctrlp_map = '<leader>f'
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>r :CtrlPMRUFiles<CR>
+
+" }}}
+
+" Search & Replace Helper {{{
+
+nmap <leader>s *Nm`cw
 
 " }}}
