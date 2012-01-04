@@ -17,3 +17,31 @@ snippet if
 	if (${1}) {
 		${2}
 	}
+
+# Jasmine Snippets
+
+snippet des
+	describe('${1}', function() {
+		${2}
+	});
+snippet bef
+	beforeEach(function() {
+		${1}
+	});
+snippet aft
+	afterEach(function() {
+		${1}
+	});
+snippet it
+	it('${1}', function() {
+		${2}
+	});
+snippet ee
+	expect(${1}).toEqual(${2});${3}
+snippet eb
+	expect(${1}).toBe(${2});${3}
+snippet ne
+	expect(${1}).not.toEqual(${2});${3}
+snippet nb
+	expect(${1}).not.toBe(${2});${3}
+
