@@ -29,6 +29,15 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 
+" CamelCaseMotion mappings.
+map - <Plug>CamelCaseMotion_w
+map _ <Plug>CamelCaseMotion_b
+omap i- <Plug>CamelCaseMotion_iw
+xmap i- <Plug>CamelCaseMotion_iw
+omap i_ <Plug>CamelCaseMotion_ib
+xmap i_ <Plug>CamelCaseMotion_ib
+Bundle 'camelcasemotion'
+
 " Enable filetype detection. Must be after bundles get added.
 filetype plugin indent on
 
