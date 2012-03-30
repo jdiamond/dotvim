@@ -23,6 +23,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-commentary'
 Bundle 'Parameter-Text-Objects'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'kana/vim-smartinput'
 
 " Bundles required for snipMate.
 Bundle 'MarcWeber/vim-addon-mw-utils'
