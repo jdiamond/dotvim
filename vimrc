@@ -20,10 +20,10 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-commentary'
 Bundle 'Parameter-Text-Objects'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'kana/vim-smartinput'
+Bundle 'tomtom/tcomment_vim'
 
 " Bundles required for snipMate.
 Bundle 'MarcWeber/vim-addon-mw-utils'
