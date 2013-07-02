@@ -1,4 +1,6 @@
-Installation:
+## Mac OS X (maybe Unix-likes, too)
+
+Clone the repository:
 
     git clone git://github.com/jdiamond/dotvim.git ~/.vim
 
@@ -12,7 +14,15 @@ Switch to the `~/.vim` directory, and fetch submodules:
     cd ~/.vim
     git submodule update --init
 
-On Windows (as Administrator):
+Install configured bundles:
+
+    vim +BundleInstall +qall
+
+If that command doesn't work, launch vim, and run :BundleInstall.
+
+## Windows
+
+As Administrator (or mklink won't work):
 
     cd %HOME%
     git clone git://github.com/jdiamond/dotvim.git .vim
@@ -20,6 +30,7 @@ On Windows (as Administrator):
     mklink .gvimrc .vim\gvimrc
     cd .vim
     git submodule update --init
+    vim +BundleInstall +qall
 
 I think that mklink only runs on Vista and up. If you're on XP, you can create
 a .vimrc with this one line in it in %HOME%.
